@@ -858,10 +858,7 @@ function buildDiagram(){
         <text x="${x+futureW/2}" y="${futureY+31}" text-anchor="middle" class="node-pill-text" fill="var(--text)">${label}</text>`;
     }).join('')}
   </g>`;
-  const archY = futureY + futureH + 24;
-  s += `<text x="${containerW/2}" y="${archY}" text-anchor="middle" class="divider-caption">성장전략·구성도 반영 / 국내 운영 → 두나무 → 해외 운영</text>`;
-
-  const totalH = archY + 20;
+  const totalH = futureY + futureH + 20;
 
   svg.setAttribute('viewBox', `0 0 ${containerW} ${totalH}`);
   svg.setAttribute('width', containerW+'px');
