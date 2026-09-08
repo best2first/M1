@@ -112,9 +112,9 @@
   .node-pill-text{font-family:var(--mono); font-size:14px; font-weight:700; fill:var(--text-dim); letter-spacing:0.2px;}
   .ledger-label{font-family:var(--mono); font-size:13px; font-weight:700; fill:var(--text); letter-spacing:1px;}
   .ledger-value{font-family:var(--mono); font-weight:700; fill:var(--cyan);}
-  .ledger-delta{font-family:var(--mono); font-size:13px; font-weight:700;}
+  .ledger-delta{font-family:var(--mono); font-size:12px; font-weight:700;}
+  .ledger-channel-total{font-family:var(--mono); font-size:9px; font-weight:700; fill:var(--text-dim); letter-spacing:0.1px;}
   .overseas-label{font-family:var(--mono); font-size:10px; fill:var(--text-faint); letter-spacing:0.4px;}
-  .ledger-channel-total{font-family:var(--mono); font-size:13px; font-weight:700; fill:var(--text-dim); letter-spacing:0.2px;}
   .divider-caption{font-family:var(--mono); font-size:10px; fill:var(--text-faint); letter-spacing:0.2px;}
   .toggle-hint{font-family:var(--mono); font-size:9px; fill:var(--text-faint);}
   .grp-toggle:hover rect.grp-box{stroke-width:2;}
@@ -663,8 +663,8 @@ function buildDiagram(){
   const rowBottom = rowTopY + maxBoxH;
   const overseasX = rowStartX + architectureW + overseasGap;
 
-  const ledgerW = 215;
-  const ledgerH = 144;
+  const ledgerW = 190;
+  const ledgerH = 132;
   const ledgerX = rowStartX + (architectureW - ledgerW)/2;
   const ledgerY = rowBottom + 78;
 
