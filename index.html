@@ -62,9 +62,9 @@
 
   /* ---------- TOPBAR ---------- */
   .topbar{display:flex; align-items:center; justify-content:center; position:relative; flex-wrap:wrap; gap:14px; padding-bottom:18px; border-bottom:1px solid var(--line);}
-  .brand{display:flex; align-items:center; gap:16px; animation:brandGlow 2.8s ease-in-out infinite;}
+  .brand{display:flex; align-items:center; justify-content:center; width:100%; gap:16px; position:relative; animation:brandGlow 2.8s ease-in-out infinite;}
   .brand-mark{
-    width:52px; height:52px; border-radius:12px;
+    width:52px; height:52px; border-radius:12px; position:absolute; left:0;
     background:linear-gradient(135deg, rgba(37,99,235,0.10), rgba(13,148,136,0.10));
     border:1px solid var(--line);
     display:flex; align-items:center; justify-content:center;
@@ -113,7 +113,7 @@
   .ledger-label{font-family:var(--mono); font-size:13px; font-weight:700; fill:var(--text); letter-spacing:1px;}
   .ledger-value{font-family:var(--mono); font-weight:700; fill:var(--cyan);}
   .ledger-delta{font-family:var(--mono); font-size:12px; font-weight:700;}
-  .ledger-channel-total{font-family:var(--mono); font-size:9px; font-weight:700; fill:var(--text-dim); letter-spacing:0.1px;}
+  .ledger-channel-total{font-family:var(--mono); font-size:11px; font-weight:700; fill:var(--text-dim); letter-spacing:0.1px;}
   .overseas-label{font-family:var(--mono); font-size:10px; fill:var(--text-faint); letter-spacing:0.4px;}
   .divider-caption{font-family:var(--mono); font-size:10px; fill:var(--text-faint); letter-spacing:0.2px;}
   .toggle-hint{font-family:var(--mono); font-size:9px; fill:var(--text-faint);}
@@ -658,7 +658,7 @@ function buildDiagram(){
   const rowBottom = rowTopY + maxBoxH;
   const overseasX = rowStartX + architectureW + overseasGap;
 
-  const ledgerW = 190;
+  const ledgerW = 215;
   const ledgerH = 132;
   const ledgerX = rowStartX + (architectureW - ledgerW)/2;
   const ledgerY = rowBottom + 78;
