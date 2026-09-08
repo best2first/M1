@@ -754,6 +754,7 @@ function buildDiagram(){
 
     if(isOpen){
       s += `<line x1="${bx+12}" y1="${by+44}" x2="${bx+bw-12}" y2="${by+44}" stroke="${g.hex}" stroke-opacity="0.25"/>`;
+      if(g.key==='MTS') s += `<g data-no-toggle="MTS">`;
       g.items.forEach((it, j)=>{
         const iy = by + headH + dividerGap + j*rowH + rowH*0.66;
         const val = month==='diff' ? fmtDelta(it.jul,it.aug) : fmt(it[month])+shareLabel(it[month]);
@@ -763,6 +764,7 @@ function buildDiagram(){
             s += `<text x="${bx+16}" y="${iy}" class="item-name">${it.name}${it.sub?(' '+it.sub):''}</text>
               <text x="${valueX}" y="${iy}" text-anchor="start" class="item-val" fill="${valColor}">${val}</text>`;
       });
+      if(g.key==='MTS') s += `</g>`;
     }
     s += `</g>`;
 
@@ -866,6 +868,10 @@ function buildDiagram(){
       expanded[key] = !expanded[key];
       buildDiagram();
     });
+  });
+
+  svg.querySelectorAll('[data-no-toggle]').forEach(el=>{
+    el.addEventListener('click', event=>event.stopPropagation());
   });
 
   svg.querySelectorAll('[data-src]').forEach(el=>{
