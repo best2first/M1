@@ -62,16 +62,17 @@
 
   /* ---------- TOPBAR ---------- */
   .topbar{display:flex; align-items:center; justify-content:center; position:relative; flex-wrap:wrap; gap:14px; padding-bottom:18px; border-bottom:1px solid var(--line);}
-  .brand{display:flex; align-items:center; justify-content:center; width:100%; gap:16px; position:relative; animation:brandGlow 2.8s ease-in-out infinite;}
+  .brand{display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; gap:8px; position:relative; animation:brandGlow 2.8s ease-in-out infinite;}
   .brand-mark{
-    width:52px; height:52px; border-radius:12px; position:absolute; left:0;
+    width:52px; height:52px; border-radius:12px;
     background:linear-gradient(135deg, rgba(37,99,235,0.10), rgba(13,148,136,0.10));
     border:1px solid var(--line);
     display:flex; align-items:center; justify-content:center;
     font-family:var(--mono); font-size:23px; color:var(--cyan);
     box-shadow:0 0 0 rgba(45,212,191,0);
   }
-  .brand-text h1{font-size:20px; font-weight:800; letter-spacing:0.2px; color:var(--text); text-shadow:0 0 14px rgba(45,212,191,0.35); border:1px solid var(--cyan); border-radius:0; background:var(--bg-panel); padding:8px 12px;}
+  .brand-text{text-align:center;}
+  .brand-text h1{font-size:20px; font-weight:800; letter-spacing:0.2px; color:var(--text); text-shadow:0 0 14px rgba(45,212,191,0.35);}
   .brand-text p{font-size:11px; color:var(--text-faint); font-family:var(--mono); letter-spacing:0.5px; margin-top:4px;}
   @keyframes brandGlow{0%,100%{filter:brightness(1);}50%{filter:brightness(1.18);}}
 
